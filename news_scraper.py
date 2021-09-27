@@ -3,8 +3,9 @@ from pymongo import MongoClient
 from bs4 import BeautifulSoup
 import datetime
 import time
+import config
 
-url = "mongodb+srv://User:User@cluster0.b762i.mongodb.net/test"
+url = config.MONGO_URL
 connection = MongoClient(url)
 db = connection.nuance
 col = db.get_collection("newsdata")
